@@ -35,17 +35,21 @@ h2 {
 .grid-area {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 350px;
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
+    max-width: 400px;
+}
+
+.grid-area > * {
+    height: 180px;
 }
 
 .grid-area div {
     display: flex;
     flex-direction: column;
     background-color: hsl(0, 0%, 100%);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(86, 77, 77, 0.3);
     position: relative;
@@ -80,9 +84,11 @@ h2 {
 
 @media(min-width: 768px) {
     .grid-area {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 300px);
         max-width: 1200px;
+        justify-content: center;
         align-items: center;
+        margin: 0 auto;
     }
     .grid-area div {
         height: 230px;
